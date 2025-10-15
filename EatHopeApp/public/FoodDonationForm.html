@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Form</title>
+    <link rel="stylesheet" href="FDF.css">
+</head>
+<body>
+    <div class="main">
+        <div class="cont">
+            <form class="fooddistributionform" action="/submit-Food" method="POST">
+                <h1>Food Distribution Form</h1>
+                <label>Name:</label>
+                <input type="text" name="name" required placeholder="Name"><br>
+
+                <label>Contact Number:</label>
+                <input type="tel" name="contact" required placeholder="Mobile/Telephone Number"><br>
+
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="XYX000@gmail.com" required><br>
+
+                <label>Location/Address:</label>
+                <textarea name="address" required placeholder="Area/Road/Landmark"></textarea><br>
+
+                <label>Type of Food:</label>
+                <input type="text" name="food_type" required placeholder="Veg/Non-Veg"><br>
+
+                <label>Quantity:</label>
+                <input type="text" name="quantity" required placeholder="Quantity"><br>
+
+                <label>Preferred Pickup Time:</label>
+                <input type="datetime-local" name="pickup_time" required><br>
+
+                <label>Additional Notes:</label>
+                <textarea name="notes" placeholder="Optional"></textarea><br>
+
+                <button type="button" onclick="cancel()">Cancel</button>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function cancel(){
+            alert("You are sure to Exit...");
+            window.location.href='index.html';
+        }
+    </script>
+</body>
+</html>

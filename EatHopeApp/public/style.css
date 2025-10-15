@@ -1,0 +1,635 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+.page1{
+    min-height: 100vh;
+    background: url(images/pexels-nishantaneja-2955819.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position:relative ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: green;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+nav a:hover{
+    transition: .2s ease;
+    text-decoration: underline;
+    transform: scale(1.05);
+    font-weight: 700;
+}
+nav li:first-child{
+    margin-right: auto;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: larger;
+}
+nav li:first-child a{
+    color: red;
+}
+nav li:first-child a:hover{
+    transition: .2s;
+    text-decoration: none;
+    transform: scale(1);
+}
+nav li:last-child a:hover{
+    transform: scale(1);
+}
+.sign:hover{
+    transform: scale(1.05);
+    transition: .2s ease;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+@media(max-width:700px){
+    .hide{
+        display: none;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+/*Sign up form */
+.signup{
+    height: 80vh;
+    background: #00000042;
+    backdrop-filter: blur(5px);
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(128, 125, 125, 0.776);
+}
+.close{
+    display: flex;
+    justify-content: right;
+    margin-top: -25px;
+}
+.signup h3{
+    color: rgb(255, 136, 0);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px 0 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+}
+.input{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input input{
+    height: 100%;
+    width: 95%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 2px;
+}
+.input input::placeholder{
+    color:white;
+}
+#remember{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    margin: -15px 0 15px;
+    color: white;
+}
+#remember label input{
+    accent-color: white;
+    margin-right: 4px;
+}
+#remember a{
+    text-decoration: none;
+    color: white;
+}
+#remember a:hover{
+    text-decoration: underline;
+}
+.signup .btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.signup .btn:hover{
+    background-color: #2980b9;
+    transform: scale(1.05);
+    transition: .2s;
+}
+.signup p{
+    font-size: 13.5px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+.signup p a{
+    color: aqua;
+}
+.login{
+    height: 80vh;
+    background: #00000042;
+    backdrop-filter: blur(5px);
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(128, 125, 125, 0.776);
+}
+.login h3{
+    color: rgb(255, 136, 0);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px 0 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+}
+.login .btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.login .btn:hover{
+    background-color: #2980b9;
+    transform: scale(1.05);
+    transition: .2s;
+}
+.login p{
+    font-size: 13.5px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+.login p a{
+    color: aqua;
+}
+/*page 2 css*/
+.page2{
+    min-height: 100vh;
+    background: url(images/38acc2f2-6f5c-4a17-a44d-11998c440760.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.text1{
+    min-height: 60vh;
+    width: 50%;
+    margin-left: 20px;
+}
+.text h1{
+    font-family: sans-serif;
+    font-size: xxx-large;
+    color: red;
+}
+.text p{
+    font-family: sans-serif;
+    font-size: 15px;
+    color: white;
+}
+.text1 .btn2 a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.text1 .btn2{
+    width: 60%;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.179);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background: #2980b9;
+    font-weight: 600;    
+    font-family: sans-serif;
+}
+.text .btn2:hover{
+    background-color: #0c5386;
+    transform: scale(1.05);
+    transition: .2s ease;
+}
+.textbox2{
+    height: 60vh;
+    width: 55%;
+}
+.textbox2 h1{
+    font-family: sans-serif;
+    font-size: xxx-large;
+}
+.textbox2 p{
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.textbox2 p span{
+    color: rgb(24, 94, 193);
+}
+.textbox2 .btn1{
+    width: 60%;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.179);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: black;
+    background: #2980b9;
+    font-weight: 600;    
+    font-family: sans-serif;
+}
+.textbox2 .btn1:hover{
+    background-color: #165e8e;
+    transform: scale(1.05);
+    transition: .2s ease;
+    color: white;
+}
+.img1{
+    height: 45vh;
+    width: 40%;
+    margin-left: 20px;
+    background: url(images/38acc2f2-6f5c-4a17-a44d-11998c440760.png) center no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    background-size: cover;
+    
+}
+.img1:hover{
+    transform: scale(1.05);
+    transition: .2s ease;
+    cursor: pointer;
+}
+.page3{
+    min-height: 100vh;
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.solvable{
+    text-align: center;
+}
+.solvable h1{
+    font-size: xxx-large;
+    padding-top: 10px;
+}
+.solvable p{
+    font-size: 14px;
+    color: #353434;
+    font-family: sans-serif;
+}
+.solvableblock1{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.solutionblock2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60vh;
+    width: 70%;
+    padding-top: 20px;
+}
+.img2{
+    height: 50vh;
+    width: 20%;
+    border: 1px solid green;
+    padding: 5px;
+}
+.img2:hover{
+    box-shadow: 0 0 10px green;
+    transition: .2s ease;
+    transform: scale(1.02);
+}
+.img3{
+    height: 50vh;
+    width: 20%;
+    border: 1px solid rgb(0, 81, 128);
+    padding: 5px;
+}
+.img3:hover{
+    box-shadow: 0 0 10px rgb(0, 81, 128);
+    transition: .2s ease;
+    transform: scale(1.02);
+}
+.img4{
+    height: 50vh;
+    width: 20%;
+    border: 1px solid rgb(128, 0, 0);
+    padding: 5px;
+}
+.img4:hover{
+    box-shadow: 0 0 10px rgb(128, 0, 0);
+    transition: .2s ease;
+    transform: scale(1.02);
+}
+.solutionblock2 h3{
+    text-align: center;
+}
+.solutionblock2 p{
+    font-size: 12px;
+    color: #353434;
+    font-family: sans-serif;
+}
+.solutionblock2 img{
+    border-radius: 20px;
+    text-align: center;
+}
+.page4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+h2 {
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .scroll-wrapper {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .scroll-container {
+  display: flex; /* use flex instead of inline-block */
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+  scroll-behavior: smooth; /* smooth scroll */
+  gap: 20px; /* space between cards instead of margin */
+}
+
+.donor-card {
+  flex: 0 0 auto; /* prevents shrinking */
+  width: 220px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    .donor-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .donor-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #ff7a00;
+    }
+
+    .donor-name {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 6px;
+      color: #222;
+    }
+
+    .donor-type {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .donor-info {
+      font-size: 12px;
+      color: #555;
+    }
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ff7a00;
+      border: none;
+      color: white;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      user-select: none;
+      z-index: 10;
+    }
+
+    .scroll-btn:hover {
+      background-color: #e66e00;
+    }
+
+    .scroll-btn:disabled {
+      background-color: #ffa94d;
+      cursor: default;
+      box-shadow: none;
+    }
+
+    .scroll-left {
+      left: -20px;
+    }
+
+    .scroll-right {
+      right: -20px;
+    }
+    @media (max-width: 600px) {
+      .scroll-btn {
+        display: none;
+      }
+    }
+.footer {
+  background-color: #1c1c1e;
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1 1 250px;
+}
+.footer h2 {
+  font-size: 28px;
+  color: #ffa500;
+  margin-bottom: 10px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer p,
+.footer a {
+  font-size: 14px;
+  color: #d1d1d1;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffa500;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #d1d1d1;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffa500;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.page5{
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media(max-width:600px){
+  .page5{
+    display: block;
+  }
+  .part1{
+    height: 45vh;
+    width: 90%;
+  }
+  .part2{
+    height: 45vh;
+    width: 90%;
+  }
+}
+.part1{
+  height: 90vh;
+  width: 45%;
+  border-radius: 20px;
+  background: url(images/7c8f5c1a-d27f-4eea-974a-555b8f0af020\ \(1\).png) center no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px;
+}
+.part2{
+  height: 90vh;
+  border-radius: 20px;
+  width: 45%;
+  background: url(images/person1.jpg) center no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px
+}
+.part img{
+  border-radius: 20px;
+}
+.part img:hover{
+  opacity: 0;
+  transition: 0.5s ease;
+}

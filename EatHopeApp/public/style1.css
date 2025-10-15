@@ -1,0 +1,335 @@
+/* ========== Global Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* base = 16px */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #222;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* ========== Navbar ========== */
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+nav li:first-child {
+  margin-right: auto;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+nav li:first-child a {
+  color: red;
+}
+
+nav a {
+  color: white;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  flex-direction: column;
+  padding: 4rem 1rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.active {
+  display: flex;
+  transform: translateX(0);
+}
+
+.sidebar a {
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px;
+}
+
+/* ========== Hero Section (Page1) ========== */
+.page1 {
+  min-height: 100vh;
+  background: url(images/pexels-nishantaneja-2955819.jpg) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.text1 h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: red;
+}
+
+.text1 p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn2 {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #2980b9;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.btn2:hover {
+  background: #0c5386;
+}
+
+/* ========== About Section (Page2) ========== */
+.page2 {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.img1 {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: url(images/38acc2f2-6f5c-4a17-a44d-11998c440760.png) center/cover no-repeat;
+}
+
+.textbox2 h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.textbox2 p {
+  font-size: 0.95rem;
+}
+
+.btn1 {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #2980b9;
+  color: white;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+/* ========== Solutions (Page3) ========== */
+.page3 {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.solvable h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.solvable p {
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.solutionblock2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.solutionblock2 > div {
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+/* ========== Donor Cards (Page4) ========== */
+.page4 {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fafafa;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.donor-card {
+  min-width: 180px;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ========== Gallery (Page5) ========== */
+.page5 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.part img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ========== Footer ========== */
+.footer {
+  background: #1c1c1e;
+  color: #f0f0f0;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer h2 {
+  font-size: 1.5rem;
+  color: #ffa500;
+}
+
+.footer p,
+.footer a {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+}
+
+/* ========== Forms (Signup / Login) ========== */
+.form-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2980b9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background: #165e8e;
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+/* Tablets */
+@media (min-width: 768px) {
+  .page2 {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .solutionblock2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .solutionblock2 > div {
+    width: 45%;
+  }
+
+  .page5 {
+    flex-direction: row;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .text1 h1 {
+    font-size: 3rem;
+  }
+
+  .textbox2 h1 {
+    font-size: 2.5rem;
+  }
+
+  .solutionblock2 > div {
+    width: 22%;
+  }
+}

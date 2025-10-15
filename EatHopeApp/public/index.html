@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="EatHope - Bridging hunger with kindness. Donate food, share hope with those in need.">
+    <title>EatHope.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class="page1">
+  <nav>
+    <ul class="sidebar">
+      <li><a href="#" onclick="Close()"><img src="images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" height="26" width="26"></a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Policy</a></li>
+      <li class="sign"><a href="#" onclick="sign()">Sign Up</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">EatHope</a></li>
+      <li class="hide"><a href="#">About</a></li>
+      <li class="hide"><a href="#">Services</a></li>
+      <li class="hide"><a href="#">Policy</a></li>
+      <li class="hide sign"><a href="#" onclick="sign()">Sign Up</a></li>
+      <li><a href="#" onclick="menu()"><img src="images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" height="26" width="26"></a></li>
+    </ul>
+  </nav>
+  <div class="signup">
+    <h3>Sign Up</h3>
+    <a href="#" class="close" onclick="Closing()"><img src="images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" height="26" width="26"></a>
+    
+    <form action="/signup" method="POST">
+      <div class="input">
+        <input type="text" name="username" placeholder="Username" required>
+      </div>
+      <div class="input">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="input">
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+      <div id="remember">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forget password</a>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+
+    <p>If you have an account <a href="#" onclick="show()">Login</a></p>
+  </div>
+  <div class="login">
+    <h3>Login</h3>
+    <a href="#" class="close" onclick="Closing()"><img src="images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" height="26" width="26"></a>
+    
+    <form action="/login" method="POST">
+      <div class="input">
+        <input type="text" name="username" placeholder="Username" required>
+      </div>
+      <div class="input">
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+      <div id="remember">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forget password</a>
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <p>If you don't have an account <a href="#" onclick="signup()">Register</a></p>
+  </div>
+
+  <div class="text">
+    <div class="text1">
+      <h1>Find Secure And Deliver Food</h1>
+      <p>We are a non-profit enabling the exchange of excess food from the food industry to those who need it most.</p>
+      <br>
+      <button class="btn2" onclick="window.location.href='FoodDonationForm.html'">Donate Food</button>
+      <button class="btn2 Users" onclick="window.location.href='Users.html'">Connected User</button>
+    </div>
+  </div>
+</section>
+    <section class="page2">
+        <div class="img1"></div>
+        <div class="textbox2">
+            <h1>Help Us Deliver Food to Hopeless People</h1>
+            <p>We aim to fight hunger by delivering food to the hopeless and those in need. Our platform connects donors,
+                 volunteers, and communities to ensure no one is left behind. 
+                Every meal shared brings hope, dignity, and care. Join us in making a real difference—
+                <br><span>one meal, one life at a time.</span></p>
+            <br><br>
+            <button class="btn1">Donate By Online</button>
+        </div>
+    </section>
+    <section class="page5">
+      <div class="part1 part">
+        <img src="images/778bb62b-95a3-46d3-9fd7-10414fc064cc.jpg" alt="" srcset="" height="100%" width="100%">
+
+      </div>
+      <div class="part2 part">
+        <img src="images/pexels-amar-10084717.jpg" alt="" srcset="" height="100%" width="100%">
+      </div>
+    </section>
+    <section class="page3">
+        <div class="solvable">
+            <h1>A Solvable Problem</h1>
+        <P>Service organizations want access to excess food, but there are barriers --locating the excess food,<br>
+            establishing their credentials, and efficiently deploying resources to transport food,<br>
+            breaks down these barriers.
+        </P>
+        </div>
+        <div class="solvableblock1">
+            <div class="solutionblock2">
+            <div class="img2">
+            <img src="images/RowFood.png" height="100px">
+            <h3>Row Food</h3>
+            <p>40% of all food thrown away or plowed over. In India, 78 million tonnes</p>
+        </div>
+        <div class="img3">
+            <img src="images/Food2.png" height="100px">
+            <h3>Prepared Food</h3>
+            <p>In India alone, over 7.5 tonnes of prepared food is thrown away every</p>
+        </div>
+        <div class="img4">
+            <img src="images/Food3.png" height="100px">
+            <h3>Hunger</h3>
+            <p>If only one-third of India's excess food were diverted. It would resolve the hunger</p>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="page4">
+    <h2>Recent Donors</h2>
+
+  <div class="scroll-wrapper">
+    <button class="scroll-btn scroll-left" aria-label="Scroll Left" id="scrollLeft">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="scroll-container" id="scrollContainer">
+      <div class="donor-card">
+        <i class="fas fa-utensils donor-icon"></i>
+        <div class="donor-name">Hotel Sunshine</div>
+        <div class="donor-type">Restaurant Owner</div>
+        <div class="donor-info">Donated 50 meal packs on June 25, 2025</div>
+      </div>
+
+      <div class="donor-card">
+        <i class="fas fa-user-friends donor-icon"></i>
+        <div class="donor-name">Abhay Soni</div>
+        <div class="donor-type">Individual</div>
+        <div class="donor-info">Donated 10 tiffins on June 25, 2025</div>
+      </div>
+
+      <div class="donor-card">
+        <i class="fas fa-utensils donor-icon"></i>
+        <div class="donor-name">Spice Delight</div>
+        <div class="donor-type">Restaurant Owner</div>
+        <div class="donor-info">Donated 30 meal packs on June 24, 2025</div>
+      </div>
+
+      <div class="donor-card">
+        <i class="fas fa-user-friends donor-icon"></i>
+        <div class="donor-name">Neha Sharma</div>
+        <div class="donor-type">Individual</div>
+        <div class="donor-info">Donated 15 tiffins on June 23, 2025</div>
+      </div>
+
+      <div class="donor-card">
+        <i class="fas fa-utensils donor-icon"></i>
+        <div class="donor-name">Golden Spoon</div>
+        <div class="donor-type">Restaurant Owner</div>
+        <div class="donor-info">Donated 40 meal packs on June 22, 2025</div>
+      </div>
+
+      <div class="donor-card">
+        <i class="fas fa-user-friends donor-icon"></i>
+        <div class="donor-name">Rahul Mehta</div>
+        <div class="donor-type">Individual</div>
+        <div class="donor-info">Donated 20 tiffins on June 21, 2025</div>
+      </div>
+    </div>
+
+    <button class="scroll-btn scroll-right" aria-label="Scroll Right" id="scrollRight">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+        <h2>EatHope</h2>
+        <p>Bridging hunger with kindness. Donate food, share hope.</p>
+        </div>
+
+        <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        </div>
+    </div>
+        <div class="footer-bottom">
+            <p>© 2025 EatHope. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body> 
+</html>
